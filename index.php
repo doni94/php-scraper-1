@@ -12,21 +12,17 @@
 
 	<?php
 
-				//include "proxy.php";
-
 		$dom = new DOMDocument();
 		$source_array = array('Detik.com','Viva.co.id','Kompas.com', 'Merdeka.com');
-		$link_sitemap    = array('https://finance.detik.com/energi/sitemap_news.xml','https://www.viva.co.id/sitemap/news/news-sitemap.xml','https://news.kompas.com/news/sitemap.xml','https://www.merdeka.com/sitemap.xml');
+		$url_sitemap_array    = array('https://finance.detik.com/energi/sitemap_news.xml','https://www.viva.co.id/sitemap/news/news-sitemap.xml','https://news.kompas.com/news/sitemap.xml','https://www.merdeka.com/sitemap.xml');
 
 
 		$no = 0;
-		foreach ($link_sitemap as $index => $link_value) {
+		foreach ($url_sitemap_array as $index => $url_sitemap_value) {
 
 			$source = $source_array[$index];
 
-					//include "proxy.php";
-
-			$dom->load($link_value);
+			$dom->load($url_sitemap_value);
 
 			$url = $dom->getElementsByTagName('url');
 			$news = $dom->getElementsByTagName('news');
@@ -35,7 +31,7 @@
 			foreach ($url as $key => $u) {
 				$no++;
 
-				$urlnya =  $u->childNodes->item(1)->nodeValue;
+				$url_artikel =  $u->childNodes->item(1)->nodeValue;
 
 				$n = $news[$key];
 
@@ -48,7 +44,7 @@
 				<td>' . $no . '</td> 
 				<td>' . $source . '</td>           
 				<td>
-				<a target="_blank" href="' . $urlnya . '">' . $title . '</a>
+				<a target="_blank" href="' . $url_artikel . '">' . $title . '</a>
 				</td>
 				<td>' . $date . '</td>
 
