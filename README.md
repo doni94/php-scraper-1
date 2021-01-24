@@ -1,1 +1,1 @@
-<a href="https://github.com/doni94/php-scrapper-1" target="_blank">Download Tutorial Membuat Web Scraper dengan PHP # Part 1 Github</a>
+This is the source code for creating a web scraper using the PHP programming language. For complete documentation, please visit : <a href="https://www.copaster.com/2021/01/tutorial-membuat-web-scraper-dengan-php-part-1.html" target="_blank">Tutorial Membuat Web Scraper dengan PHP # Part 1</a>
